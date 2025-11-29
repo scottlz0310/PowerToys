@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Look at Directory.Build.props in root for common stuff as well -->
+  <Import Project="..\..\..\Common.Dotnet.CsWinRT.props" />
+  <Import Project="..\..\..\Common.SelfContained.props" />
+  <Import Project="..\..\..\Common.Dotnet.AotCompatibility.props" />
+
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyTitle>PowerToys.PhotoGeoPreviewHandler</AssemblyTitle>
+    <AssemblyDescription>PowerToys PhotoGeoPreviewHandler</AssemblyDescription>
+    <Description>PowerToys PhotoGeoPreviewHandler</Description>
+    <DocumentationFile>..\..\..\..\$(Platform)\$(Configuration)\PhotoGeoPreviewPaneDocumentation.xml</DocumentationFile>
+    <OutputPath>..\..\..\..\$(Platform)\$(Configuration)</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <GenerateSatelliteAssembliesForCore>true</GenerateSatelliteAssembliesForCore>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ProjectGuid>{C9E4D8F3-7A6B-4E2C-9F1D-5B3A8E7C4D2F}</ProjectGuid>
+    <RootNamespace>Microsoft.PowerToys.PreviewHandler.PhotoGeo</RootNamespace>
+    <AssemblyName>PowerToys.PhotoGeoPreviewHandler</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="PhotoGeoPreviewHandlerControl.cs" />
+    <Compile Update="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <!-- See https://learn.microsoft.com/windows/apps/develop/platform/csharp-winrt/net-projection-from-cppwinrt-component for more info -->
+  <PropertyGroup>
+    <CsWinRTIncludes>PowerToys.GPOWrapper</CsWinRTIncludes>
+    <CsWinRTGeneratedFilesDir>$(OutDir)</CsWinRTGeneratedFilesDir>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- Disable missing comment warning. WinRT/C++ libraries added won't have comments on their reflections. -->
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" />
+    <PackageReference Include="System.IO.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\common\FilePreviewCommon\FilePreviewCommon.csproj" />
+    <!-- Temporarily commented out for development - uncomment before PR -->
+    <!--<ProjectReference Include="..\..\..\common\GPOWrapper\GPOWrapper.vcxproj" />-->
+    <!--<ProjectReference Include="..\..\..\common\interop\PowerToys.Interop.vcxproj" />-->
+    <ProjectReference Include="..\..\..\common\ManagedTelemetry\Telemetry\ManagedTelemetry.csproj" />
+    <ProjectReference Include="..\common\PreviewHandlerCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

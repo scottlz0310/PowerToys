@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.32014.148
+VisualStudioVersion = 17.14.36717.8 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "runner", "src\runner\runner.vcxproj", "{9412D5C6-2CF2-4FC2-A601-B55508EA9B27}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -157,6 +157,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Preview.MarkdownPreviewHandler.UnitTests", "src\modules\previewpane\UnitTests-MarkdownPreviewHandler\Preview.MarkdownPreviewHandler.UnitTests.csproj", "{A2B51B8B-8F90-424E-BC97-F9AB7D76CA1A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvgPreviewHandler", "src\modules\previewpane\SvgPreviewHandler\SvgPreviewHandler.csproj", "{DA425894-6E13-404F-8DCB-78584EC0557A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotoGeoPreviewHandler", "src\modules\previewpane\PhotoGeoPreviewHandler\PhotoGeoPreviewHandler.csproj", "{C9E4D8F3-7A6B-4E2C-9F1D-5B3A8E7C4D2F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Preview.SvgPreviewHandler.UnitTests", "src\modules\previewpane\UnitTests-SvgPreviewHandler\Preview.SvgPreviewHandler.UnitTests.csproj", "{060D75DA-2D1C-48E6-A4A1-6F0718B64661}"
 EndProject
@@ -478,6 +480,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PdfPreviewHandlerCpp", "src\modules\previewpane\PdfPreviewHandlerCpp\PdfPreviewHandlerCpp.vcxproj", "{54F7C616-FD41-4E62-BFF9-015686914F4D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SvgPreviewHandlerCpp", "src\modules\previewpane\SvgPreviewHandlerCpp\SvgPreviewHandlerCpp.vcxproj", "{143F13E3-D2E3-4D83-B035-356612D99956}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PhotoGeoPreviewHandlerCpp", "src\modules\previewpane\PhotoGeoPreviewHandlerCpp\PhotoGeoPreviewHandlerCpp.vcxproj", "{B7F9A8E2-5C3D-4A1B-9E6F-8D2A4C7B9E3F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GcodeThumbnailProviderCpp", "src\modules\previewpane\GcodeThumbnailProviderCpp\GcodeThumbnailProviderCpp.vcxproj", "{56CC2F10-6E41-453D-BE16-C593A5E58482}"
 EndProject
@@ -1106,6 +1110,14 @@ Global
 		{DA425894-6E13-404F-8DCB-78584EC0557A}.Release|ARM64.Build.0 = Release|ARM64
 		{DA425894-6E13-404F-8DCB-78584EC0557A}.Release|x64.ActiveCfg = Release|x64
 		{DA425894-6E13-404F-8DCB-78584EC0557A}.Release|x64.Build.0 = Release|x64
+		{C9E4D8F3-7A6B-4E2C-9F1D-5B3A8E7C4D2F}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{C9E4D8F3-7A6B-4E2C-9F1D-5B3A8E7C4D2F}.Debug|ARM64.Build.0 = Debug|ARM64
+		{C9E4D8F3-7A6B-4E2C-9F1D-5B3A8E7C4D2F}.Debug|x64.ActiveCfg = Debug|x64
+		{C9E4D8F3-7A6B-4E2C-9F1D-5B3A8E7C4D2F}.Debug|x64.Build.0 = Debug|x64
+		{C9E4D8F3-7A6B-4E2C-9F1D-5B3A8E7C4D2F}.Release|ARM64.ActiveCfg = Release|ARM64
+		{C9E4D8F3-7A6B-4E2C-9F1D-5B3A8E7C4D2F}.Release|ARM64.Build.0 = Release|ARM64
+		{C9E4D8F3-7A6B-4E2C-9F1D-5B3A8E7C4D2F}.Release|x64.ActiveCfg = Release|x64
+		{C9E4D8F3-7A6B-4E2C-9F1D-5B3A8E7C4D2F}.Release|x64.Build.0 = Release|x64
 		{060D75DA-2D1C-48E6-A4A1-6F0718B64661}.Debug|ARM64.ActiveCfg = Debug|ARM64
 		{060D75DA-2D1C-48E6-A4A1-6F0718B64661}.Debug|ARM64.Build.0 = Debug|ARM64
 		{060D75DA-2D1C-48E6-A4A1-6F0718B64661}.Debug|x64.ActiveCfg = Debug|x64
@@ -1958,6 +1970,14 @@ Global
 		{143F13E3-D2E3-4D83-B035-356612D99956}.Release|ARM64.Build.0 = Release|ARM64
 		{143F13E3-D2E3-4D83-B035-356612D99956}.Release|x64.ActiveCfg = Release|x64
 		{143F13E3-D2E3-4D83-B035-356612D99956}.Release|x64.Build.0 = Release|x64
+		{B7F9A8E2-5C3D-4A1B-9E6F-8D2A4C7B9E3F}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{B7F9A8E2-5C3D-4A1B-9E6F-8D2A4C7B9E3F}.Debug|ARM64.Build.0 = Debug|ARM64
+		{B7F9A8E2-5C3D-4A1B-9E6F-8D2A4C7B9E3F}.Debug|x64.ActiveCfg = Debug|x64
+		{B7F9A8E2-5C3D-4A1B-9E6F-8D2A4C7B9E3F}.Debug|x64.Build.0 = Debug|x64
+		{B7F9A8E2-5C3D-4A1B-9E6F-8D2A4C7B9E3F}.Release|ARM64.ActiveCfg = Release|ARM64
+		{B7F9A8E2-5C3D-4A1B-9E6F-8D2A4C7B9E3F}.Release|ARM64.Build.0 = Release|ARM64
+		{B7F9A8E2-5C3D-4A1B-9E6F-8D2A4C7B9E3F}.Release|x64.ActiveCfg = Release|x64
+		{B7F9A8E2-5C3D-4A1B-9E6F-8D2A4C7B9E3F}.Release|x64.Build.0 = Release|x64
 		{56CC2F10-6E41-453D-BE16-C593A5E58482}.Debug|ARM64.ActiveCfg = Debug|ARM64
 		{56CC2F10-6E41-453D-BE16-C593A5E58482}.Debug|ARM64.Build.0 = Debug|ARM64
 		{56CC2F10-6E41-453D-BE16-C593A5E58482}.Debug|x64.ActiveCfg = Debug|x64

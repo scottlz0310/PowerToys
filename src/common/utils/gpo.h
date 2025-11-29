@@ -35,6 +35,7 @@ namespace powertoys_gpo
     const std::wstring POLICY_CONFIGURE_ENABLED_FANCYZONES = L"ConfigureEnabledUtilityFancyZones";
     const std::wstring POLICY_CONFIGURE_ENABLED_FILE_LOCKSMITH = L"ConfigureEnabledUtilityFileLocksmith";
     const std::wstring POLICY_CONFIGURE_ENABLED_SVG_PREVIEW = L"ConfigureEnabledUtilityFileExplorerSVGPreview";
+    const std::wstring POLICY_CONFIGURE_ENABLED_PHOTOGEO_PREVIEW = L"ConfigureEnabledUtilityFileExplorerPhotoGeoPreview";
     const std::wstring POLICY_CONFIGURE_ENABLED_MARKDOWN_PREVIEW = L"ConfigureEnabledUtilityFileExplorerMarkdownPreview";
     const std::wstring POLICY_CONFIGURE_ENABLED_MONACO_PREVIEW = L"ConfigureEnabledUtilityFileExplorerMonacoPreview";
     const std::wstring POLICY_CONFIGURE_ENABLED_PDF_PREVIEW = L"ConfigureEnabledUtilityFileExplorerPDFPreview";
@@ -323,6 +324,11 @@ namespace powertoys_gpo
     inline gpo_rule_configured_t getConfiguredSvgPreviewEnabledValue()
     {
         return getUtilityEnabledValue(POLICY_CONFIGURE_ENABLED_SVG_PREVIEW);
+    }
+
+    inline gpo_rule_configured_t getConfiguredPhotoGeoPreviewEnabledValue()
+    {
+        return getUtilityEnabledValue(POLICY_CONFIGURE_ENABLED_PHOTOGEO_PREVIEW);
     }
 
     inline gpo_rule_configured_t getConfiguredMarkdownPreviewEnabledValue()

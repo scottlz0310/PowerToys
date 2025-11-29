@@ -153,6 +153,9 @@
   <data name="Prevpane_Svg_Settings_Displayname" xml:space="preserve">
     <value>SVG Previewer</value>
   </data>
+  <data name="Prevpane_PhotoGeo_Settings_Description" xml:space="preserve">
+    <value>PhotoGeo Previewer (Images with GPS data)</value>
+  </data>
   <data name="Svg_Thumbnail_Provider_Settings_Description" xml:space="preserve">
     <value>Svg Thumbnail Provider</value>
   </data>

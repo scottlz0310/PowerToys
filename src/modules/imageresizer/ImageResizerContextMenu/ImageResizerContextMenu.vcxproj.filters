@@ -37,7 +37,25 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\ImageResizer\**">
+    <None Include="Assets\ImageResizer\LargeTile.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\ImageResizer\SmallTile.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\ImageResizer\SplashScreen.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\ImageResizer\Square150x150Logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\ImageResizer\Square44x44Logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\ImageResizer\storelogo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\ImageResizer\Wide310x150Logo.png">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="packages.config" />
@@ -50,10 +68,37 @@
     <None Include="Resources.resx">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="Assets\ImageResizer\ImageResizer.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\ImageResizer\LargeTile.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\ImageResizer\SmallTile.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\ImageResizer\SplashScreen.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\ImageResizer\Square150x150Logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\ImageResizer\Square44x44Logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\ImageResizer\storelogo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\ImageResizer\Wide310x150Logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Generated Files/ImageResizerContextMenu.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>

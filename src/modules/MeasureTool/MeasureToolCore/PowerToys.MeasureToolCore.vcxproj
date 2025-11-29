@@ -37,6 +37,18 @@
     <GenerateManifest>false</GenerateManifest>
     <DesktopCompatible>true</DesktopCompatible>
   </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <Import Project="..\..\..\..\deps\spdlog.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -176,7 +188,7 @@
     <Error Condition="!Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.Runtime.1.8.250907003\build\native\Microsoft.WindowsAppSDK.Runtime.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.WindowsAppSDK.Runtime.1.8.250907003\build\native\Microsoft.WindowsAppSDK.Runtime.props'))" />
     <Error Condition="!Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.Runtime.1.8.250907003\build\native\Microsoft.WindowsAppSDK.Runtime.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.WindowsAppSDK.Runtime.1.8.250907003\build\native\Microsoft.WindowsAppSDK.Runtime.targets'))" />
     <Error Condition="!Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.props'))" />
-    <Error Condition="!Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.targets'))" />    
+    <Error Condition="!Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.targets'))" />
     <Error Condition="!Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.InteractiveExperiences.1.8.250906004\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.WindowsAppSDK.InteractiveExperiences.1.8.250906004\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.props'))" />
     <Error Condition="!Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.InteractiveExperiences.1.8.250906004\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\..\packages\Microsoft.WindowsAppSDK.InteractiveExperiences.1.8.250906004\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets'))" />
   </Target>

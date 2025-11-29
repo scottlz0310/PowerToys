@@ -27,13 +27,13 @@
   <PropertyGroup Condition="'$(Configuration)'=='Debug'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Release'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -45,7 +45,6 @@
   <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <OutDir>..\..\..\..\$(Platform)\$(Configuration)\</OutDir>
@@ -115,7 +114,6 @@
     <ClCompile Include="trace.cpp" />
     <ClCompile Include="WinHookEventIDs.cpp" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\..\common\logger\logger.vcxproj">
       <Project>{d9b8fc84-322a-4f9f-bbb9-20915c47ddfd}</Project>
@@ -145,7 +143,6 @@
     </ItemGroup>
     <Delete Files="@(_ToDelete)" Condition="Exists('%(Identity)')" />
   </Target>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="..\..\..\..\deps\spdlog.props" />
   <Import Project="..\..\..\..\packages\Microsoft.Windows.CppWinRT.2.0.240111.5\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('..\..\..\..\packages\Microsoft.Windows.CppWinRT.2.0.240111.5\build\native\Microsoft.Windows.CppWinRT.targets')" />
@@ -159,7 +156,6 @@
   <Import Project="..\..\..\..\packages\Microsoft.WindowsAppSDK.Runtime.1.8.250907003\build\native\Microsoft.WindowsAppSDK.Runtime.targets" Condition="Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.Runtime.1.8.250907003\build\native\Microsoft.WindowsAppSDK.Runtime.targets')" />
   <Import Project="..\..\..\..\packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.targets" Condition="Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.targets')" />
   <Import Project="..\..\..\..\packages\Microsoft.WindowsAppSDK.InteractiveExperiences.1.8.250906004\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets" Condition="Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.InteractiveExperiences.1.8.250906004\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets')" />
-
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>

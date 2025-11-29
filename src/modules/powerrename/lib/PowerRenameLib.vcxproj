@@ -9,7 +9,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -54,10 +54,10 @@
     <ClInclude Include="trace.h" />
     <ClInclude Include="MetadataTypes.h" />
     <ClInclude Include="PropVariantValue.h" />
-  <ClInclude Include="WICMetadataExtractor.h" />
-  <ClInclude Include="MetadataPatternExtractor.h" />
-  <ClInclude Include="MetadataFormatHelper.h" />
-  <ClInclude Include="MetadataResultCache.h" />
+    <ClInclude Include="WICMetadataExtractor.h" />
+    <ClInclude Include="MetadataPatternExtractor.h" />
+    <ClInclude Include="MetadataFormatHelper.h" />
+    <ClInclude Include="MetadataResultCache.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Enumerating.cpp" />
@@ -75,10 +75,10 @@
       <PrecompiledHeader Condition="'$(UsePrecompiledHeaders)' != 'false'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="trace.cpp" />
-  <ClCompile Include="WICMetadataExtractor.cpp" />
-  <ClCompile Include="MetadataPatternExtractor.cpp" />
-  <ClCompile Include="MetadataFormatHelper.cpp" />
-  <ClCompile Include="MetadataResultCache.cpp" />
+    <ClCompile Include="WICMetadataExtractor.cpp" />
+    <ClCompile Include="MetadataPatternExtractor.cpp" />
+    <ClCompile Include="MetadataFormatHelper.cpp" />
+    <ClCompile Include="MetadataResultCache.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

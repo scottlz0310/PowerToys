@@ -7,9 +7,6 @@
   <Import Project="..\..\..\..\packages\Microsoft.WindowsAppSDK.Runtime.1.8.250907003\build\native\Microsoft.WindowsAppSDK.Runtime.props" Condition="Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.Runtime.1.8.250907003\build\native\Microsoft.WindowsAppSDK.Runtime.props')" />
   <Import Project="..\..\..\..\packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.props" Condition="Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.props')" />
   <Import Project="..\..\..\..\packages\Microsoft.WindowsAppSDK.InteractiveExperiences.1.8.250906004\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.props" Condition="Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.InteractiveExperiences.1.8.250906004\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.props')" />
-  
-  
-  
   <Import Project="..\..\..\..\packages\Microsoft.Windows.SDK.BuildTools.10.0.26100.4188\build\Microsoft.Windows.SDK.BuildTools.props" Condition="Exists('..\..\..\..\packages\Microsoft.Windows.SDK.BuildTools.10.0.26100.4188\build\Microsoft.Windows.SDK.BuildTools.props')" />
   <Import Project="..\..\..\..\packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.20250829.1\build\Microsoft.Windows.SDK.BuildTools.MSIX.props" Condition="Exists('..\..\..\..\packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.20250829.1\build\Microsoft.Windows.SDK.BuildTools.MSIX.props')" />
   <Import Project="..\..\..\..\packages\Microsoft.Windows.CppWinRT.2.0.240111.5\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('..\..\..\..\packages\Microsoft.Windows.CppWinRT.2.0.240111.5\build\native\Microsoft.Windows.CppWinRT.props')" />
@@ -42,7 +39,7 @@
   <Import Project="..\..\..\..\deps\spdlog.props" />
   <PropertyGroup Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <DesktopCompatible>true</DesktopCompatible>
   </PropertyGroup>
@@ -215,7 +212,7 @@
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\..\..\..\packages\Microsoft.Windows.CppWinRT.2.0.240111.5\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('..\..\..\..\packages\Microsoft.Windows.CppWinRT.2.0.240111.5\build\native\Microsoft.Windows.CppWinRT.targets')" />
     <Import Project="..\..\..\..\packages\Microsoft.Windows.ImplementationLibrary.1.0.231216.1\build\native\Microsoft.Windows.ImplementationLibrary.targets" Condition="Exists('..\..\..\..\packages\Microsoft.Windows.ImplementationLibrary.1.0.231216.1\build\native\Microsoft.Windows.ImplementationLibrary.targets')" />
-        <Import Project="..\..\..\..\packages\Microsoft.Windows.SDK.BuildTools.10.0.26100.4188\build\Microsoft.Windows.SDK.BuildTools.targets" Condition="Exists('..\..\..\..\packages\Microsoft.Windows.SDK.BuildTools.10.0.26100.4188\build\Microsoft.Windows.SDK.BuildTools.targets')" />
+    <Import Project="..\..\..\..\packages\Microsoft.Windows.SDK.BuildTools.10.0.26100.4188\build\Microsoft.Windows.SDK.BuildTools.targets" Condition="Exists('..\..\..\..\packages\Microsoft.Windows.SDK.BuildTools.10.0.26100.4188\build\Microsoft.Windows.SDK.BuildTools.targets')" />
     <Import Project="..\..\..\..\packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.20250829.1\build\Microsoft.Windows.SDK.BuildTools.MSIX.targets" Condition="Exists('..\..\..\..\packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.20250829.1\build\Microsoft.Windows.SDK.BuildTools.MSIX.targets')" />
     <Import Project="..\..\..\..\packages\Microsoft.Web.WebView2.1.0.2903.40\build\native\Microsoft.Web.WebView2.targets" Condition="Exists('..\..\..\..\packages\Microsoft.Web.WebView2.1.0.2903.40\build\native\Microsoft.Web.WebView2.targets')" />
     <Import Project="..\..\..\..\packages\Microsoft.WindowsAppSDK.1.8.250907003\build\native\Microsoft.WindowsAppSDK.targets" Condition="Exists('..\..\..\..\packages\Microsoft.WindowsAppSDK.1.8.250907003\build\native\Microsoft.WindowsAppSDK.targets')" />
@@ -228,7 +225,7 @@
     <Import Project="..\..\..\..\packages\boost.1.87.0\build\boost.targets" Condition="Exists('..\..\..\..\packages\boost.1.87.0\build\boost.targets')" />
     <Import Project="..\..\..\..\packages\boost_regex-vc143.1.87.0\build\boost_regex-vc143.targets" Condition="Exists('..\..\..\..\packages\boost_regex-vc143.1.87.0\build\boost_regex-vc143.targets')" />
   </ImportGroup>
-    <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>

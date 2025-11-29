@@ -10,6 +10,8 @@
     <ClCompile Include="PowerRenameRegExTests.cpp" />
     <ClCompile Include="TestFileHelper.cpp" />
     <ClCompile Include="PowerRenameRegExBoostTests.cpp" />
+    <ClCompile Include="MetadataFormatHelperTests.cpp" />
+    <ClCompile Include="WICMetadataExtractorTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MockPowerRenameItem.h" />

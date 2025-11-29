@@ -151,6 +151,10 @@ namespace winrt::PowerToys::Interop::implementation
     {
         return CommonSharedConstants::SVG_PREVIEW_RESIZE_EVENT;
     }
+    hstring Constants::PhotoGeoPreviewResizeEvent()
+    {
+        return CommonSharedConstants::PHOTOGEO_PREVIEW_RESIZE_EVENT;
+    }
     hstring Constants::ShowHostsSharedEvent()
     {
         return CommonSharedConstants::SHOW_HOSTS_EVENT;

@@ -44,6 +44,10 @@ namespace winrt::PowerToys::GPOWrapper::implementation
     {
         return static_cast<GpoRuleConfigured>(powertoys_gpo::getConfiguredSvgPreviewEnabledValue());
     }
+    GpoRuleConfigured GPOWrapper::GetConfiguredPhotoGeoPreviewEnabledValue()
+    {
+        return static_cast<GpoRuleConfigured>(powertoys_gpo::getConfiguredPhotoGeoPreviewEnabledValue());
+    }
     GpoRuleConfigured GPOWrapper::GetConfiguredMarkdownPreviewEnabledValue()
     {
         return static_cast<GpoRuleConfigured>(powertoys_gpo::getConfiguredMarkdownPreviewEnabledValue());

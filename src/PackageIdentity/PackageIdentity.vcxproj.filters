@@ -10,6 +10,7 @@
     <None Include="AppxManifest.xml" />
     <None Include="BuildSparsePackage.ps1" />
     <None Include="BuildSparsePackage.cmd" />
+    <None Include="Check-ProcessIdentity.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Images\Square150x150Logo.png">

@@ -14,6 +14,7 @@ namespace NonLocalizable
     const static wchar_t* ListID = L"list";
     const static wchar_t* ExtensionsID = L"extensions";
     const static std::vector<std::wstring> ExtSVG      = { L".svg" };
+    const static std::vector<std::wstring> ExtPhotoGeo = { L".jpg", L".jpeg", L".png", L".bmp", L".gif", L".tif", L".tiff", L".heic", L".heif" };
     const static std::vector<std::wstring> ExtMarkdown = { L".md", L".markdown", L".mdown", L".mkdn", L".mkd", L".mdwn", L".mdtxt", L".mdtext" };
     const static std::vector<std::wstring> ExtPDF      = { L".pdf" };
     const static std::vector<std::wstring> ExtGCode    = { L".gcode" };
@@ -38,6 +39,21 @@ inline registry::ChangeSet getSvgPreviewHandlerChangeSet(const std::wstring inst
                                   L"SvgPreviewHandler",
                                   L"Svg Preview Handler",
                                   NonLocalizable::ExtSVG);
+}
+
+inline registry::ChangeSet getPhotoGeoPreviewHandlerChangeSet(const std::wstring installationDir, const bool perUser)
+{
+    using namespace registry::shellex;
+    return generatePreviewHandler(PreviewHandlerType::preview,
+                                  perUser,
+                                  L"{A7B8E8C3-9F2D-4E5A-B1C3-7D9F6E4A2B8C}",
+                                  get_std_product_version(),
+                                  (fs::path{ installationDir } /
+                                   LR"d(PowerToys.PhotoGeoPreviewHandlerCpp.dll)d")
+                                      .wstring(),
+                                  L"PhotoGeoPreviewHandler",
+                                  L"PhotoGeo Preview Handler",
+                                  NonLocalizable::ExtPhotoGeo);
 }
 
 inline registry::ChangeSet getMdPreviewHandlerChangeSet(const std::wstring installationDir, const bool perUser)
@@ -299,6 +315,7 @@ inline std::vector<registry::ChangeSet> getAllOnByDefaultModulesChangeSets(const
 {
     constexpr bool PER_USER = true;
     return { getSvgPreviewHandlerChangeSet(installationDir, PER_USER),
+             getPhotoGeoPreviewHandlerChangeSet(installationDir, PER_USER),
              getMdPreviewHandlerChangeSet(installationDir, PER_USER),
              getMonacoPreviewHandlerChangeSet(installationDir, PER_USER),
              getGcodePreviewHandlerChangeSet(installationDir, PER_USER),
@@ -316,6 +333,7 @@ inline std::vector<registry::ChangeSet> getAllModulesChangeSets(const std::wstri
 {
     constexpr bool PER_USER = true;
     return { getSvgPreviewHandlerChangeSet(installationDir, PER_USER),
+             getPhotoGeoPreviewHandlerChangeSet(installationDir, PER_USER),
              getMdPreviewHandlerChangeSet(installationDir, PER_USER),
              getMonacoPreviewHandlerChangeSet(installationDir, PER_USER),
              getPdfPreviewHandlerChangeSet(installationDir, PER_USER),

@@ -30,6 +30,11 @@ PowerPreviewModule::PowerPreviewModule() :
                                       .checkModuleGPOEnabledRuleFunction = powertoys_gpo::getConfiguredSvgPreviewEnabledValue,
                                       .registryChanges = getSvgPreviewHandlerChangeSet(installationDir, installPerUser) });
 
+    m_fileExplorerModules.push_back({ .settingName = L"photogeo-previewer-toggle-setting",
+                                      .settingDescription = GET_RESOURCE_STRING(IDS_PREVPANE_PHOTOGEO_SETTINGS_DESCRIPTION),
+                                      .checkModuleGPOEnabledRuleFunction = powertoys_gpo::getConfiguredPhotoGeoPreviewEnabledValue,
+                                      .registryChanges = getPhotoGeoPreviewHandlerChangeSet(installationDir, installPerUser) });
+
     m_fileExplorerModules.push_back({ .settingName = L"md-previewer-toggle-setting",
                                       .settingDescription = GET_RESOURCE_STRING(IDS_PREVPANE_MD_SETTINGS_DESCRIPTION),
                                       .checkModuleGPOEnabledRuleFunction = powertoys_gpo::getConfiguredMarkdownPreviewEnabledValue,

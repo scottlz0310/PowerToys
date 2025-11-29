@@ -35,7 +35,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Assets\PowerRename\**">
+    <None Include="Assets\PowerRename\PowerRenameUI.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\SmallTile.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\SplashScreen.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\Square150x150Logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\Square44x44Logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\storelogo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\Wide310x150Logo.png">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="resource.base.h">
@@ -45,6 +63,30 @@
       <Filter>Resource Files</Filter>
     </None>
     <None Include="Resources.resx">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\LargeTile.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\PowerRenameUI.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\SmallTile.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\SplashScreen.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\Square150x150Logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\Square44x44Logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\storelogo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Assets\PowerRename\Wide310x150Logo.png">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
@@ -72,11 +114,11 @@
     <Image Include="Assets\PowerRename\Wide310x150Logo.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Assets\PowerRename\*.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="Assets\PowerRename\SplashScreen.png">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
   </ItemGroup>
 </Project>

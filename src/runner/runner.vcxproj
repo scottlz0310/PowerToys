@@ -25,7 +25,7 @@
   <ImportGroup Label="Shared" />
   <PropertyGroup Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WindowsPackageType>None</WindowsPackageType>
     <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
     <WindowsAppSdkUndockedRegFreeWinRTInitialize>true</WindowsAppSdkUndockedRegFreeWinRTInitialize>
@@ -141,16 +141,16 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="..\..\deps\spdlog.props" />
   <ImportGroup Label="ExtensionTargets">
-  <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.1.8.250907003\build\native\Microsoft.WindowsAppSDK.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.1.8.250907003\build\native\Microsoft.WindowsAppSDK.targets')" />
-  <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.Base.1.8.250831001\build\native\Microsoft.WindowsAppSDK.Base.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.Base.1.8.250831001\build\native\Microsoft.WindowsAppSDK.Base.targets')" />
-  <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.Foundation.1.8.250906002\build\native\Microsoft.WindowsAppSDK.Foundation.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.Foundation.1.8.250906002\build\native\Microsoft.WindowsAppSDK.Foundation.targets')" />
-  <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.WinUI.1.8.250906003\build\native\Microsoft.WindowsAppSDK.WinUI.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.WinUI.1.8.250906003\build\native\Microsoft.WindowsAppSDK.WinUI.targets')" />
-  <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.Runtime.1.8.250907003\build\native\Microsoft.WindowsAppSDK.Runtime.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.Runtime.1.8.250907003\build\native\Microsoft.WindowsAppSDK.Runtime.targets')" />
-  <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.targets')" />
-  <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.InteractiveExperiences.1.8.250906004\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.InteractiveExperiences.1.8.250906004\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets')" />
-  <Import Project="$(SolutionDir)packages\Microsoft.Web.WebView2.1.0.2903.40\build\native\Microsoft.Web.WebView2.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.Web.WebView2.1.0.2903.40\build\native\Microsoft.Web.WebView2.targets')" />
-  <Import Project="$(SolutionDir)packages\Microsoft.Windows.CppWinRT.2.0.240111.5\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.Windows.CppWinRT.2.0.240111.5\build\native\Microsoft.Windows.CppWinRT.targets')" />
-  <Import Project="$(SolutionDir)packages\Microsoft.Windows.ImplementationLibrary.1.0.231216.1\build\native\Microsoft.Windows.ImplementationLibrary.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.Windows.ImplementationLibrary.1.0.231216.1\build\native\Microsoft.Windows.ImplementationLibrary.targets')" />
+    <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.1.8.250907003\build\native\Microsoft.WindowsAppSDK.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.1.8.250907003\build\native\Microsoft.WindowsAppSDK.targets')" />
+    <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.Base.1.8.250831001\build\native\Microsoft.WindowsAppSDK.Base.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.Base.1.8.250831001\build\native\Microsoft.WindowsAppSDK.Base.targets')" />
+    <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.Foundation.1.8.250906002\build\native\Microsoft.WindowsAppSDK.Foundation.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.Foundation.1.8.250906002\build\native\Microsoft.WindowsAppSDK.Foundation.targets')" />
+    <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.WinUI.1.8.250906003\build\native\Microsoft.WindowsAppSDK.WinUI.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.WinUI.1.8.250906003\build\native\Microsoft.WindowsAppSDK.WinUI.targets')" />
+    <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.Runtime.1.8.250907003\build\native\Microsoft.WindowsAppSDK.Runtime.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.Runtime.1.8.250907003\build\native\Microsoft.WindowsAppSDK.Runtime.targets')" />
+    <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.DWrite.1.8.25090401\build\Microsoft.WindowsAppSDK.DWrite.targets')" />
+    <Import Project="$(SolutionDir)packages\Microsoft.WindowsAppSDK.InteractiveExperiences.1.8.250906004\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.WindowsAppSDK.InteractiveExperiences.1.8.250906004\build\native\Microsoft.WindowsAppSDK.InteractiveExperiences.targets')" />
+    <Import Project="$(SolutionDir)packages\Microsoft.Web.WebView2.1.0.2903.40\build\native\Microsoft.Web.WebView2.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.Web.WebView2.1.0.2903.40\build\native\Microsoft.Web.WebView2.targets')" />
+    <Import Project="$(SolutionDir)packages\Microsoft.Windows.CppWinRT.2.0.240111.5\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.Windows.CppWinRT.2.0.240111.5\build\native\Microsoft.Windows.CppWinRT.targets')" />
+    <Import Project="$(SolutionDir)packages\Microsoft.Windows.ImplementationLibrary.1.0.231216.1\build\native\Microsoft.Windows.ImplementationLibrary.targets" Condition="Exists('$(SolutionDir)packages\Microsoft.Windows.ImplementationLibrary.1.0.231216.1\build\native\Microsoft.Windows.ImplementationLibrary.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
