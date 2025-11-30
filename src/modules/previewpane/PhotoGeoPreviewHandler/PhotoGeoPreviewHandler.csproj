@@ -47,8 +47,13 @@
   </PropertyGroup>
   <PropertyGroup>
     <!-- Disable missing comment warning. WinRT/C++ libraries added won't have comments on their reflections. -->
-    <NoWarn>$(NoWarn);1591</NoWarn>
+    <!-- Disable MSB3277 warning. WebView2 package structure causes harmless assembly resolution warnings. -->
+    <NoWarn>$(NoWarn);1591;MSB3277</NoWarn>
     <OutputType>WinExe</OutputType>
+    <!-- Enable warnings as errors to match PowerToys quality standards -->
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!-- Use PowerToys code analysis rules -->
+    <CodeAnalysisRuleSet>..\..\..\..\src\codeAnalysis\Rules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
   <ItemGroup>

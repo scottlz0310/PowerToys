@@ -81,6 +81,23 @@ namespace Microsoft.PowerToys.PreviewHandler.PhotoGeo
         }
 
         /// <summary>
+        /// Disposes the resources used by the control.
+        /// </summary>
+        /// <param name="disposing">True if called from Dispose, false otherwise.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                _browser?.Dispose();
+                _browser = null;
+                _infoBar?.Dispose();
+                _infoBar = null;
+            }
+
+            base.Dispose(disposing);
+        }
+
+        /// <summary>
         /// Start the preview on the Control.
         /// </summary>
         /// <param name="dataSource">Path to the file.</param>
@@ -145,8 +162,8 @@ namespace Microsoft.PowerToys.PreviewHandler.PhotoGeo
                         // Allow local file and external resources (Leaflet CDN, OpenStreetMap tiles)
                         var uri = new Uri(e.Request.Uri);
                         if (uri != _localFileURI &&
-                            !uri.Host.Contains("unpkg.com") &&
-                            !uri.Host.Contains("openstreetmap.org") &&
+                            !uri.Host.Contains("unpkg.com", StringComparison.OrdinalIgnoreCase) &&
+                            !uri.Host.Contains("openstreetmap.org", StringComparison.OrdinalIgnoreCase) &&
                             !uri.Scheme.Equals("data", StringComparison.OrdinalIgnoreCase))
                         {
                             e.Response = _browser.CoreWebView2.Environment.CreateWebResourceResponse(null, 403, "Forbidden", null);
@@ -437,14 +454,14 @@ namespace Microsoft.PowerToys.PreviewHandler.PhotoGeo
                 string base64String = Convert.ToBase64String(imageBytes);
 
                 // Determine MIME type from file extension
-                string extension = Path.GetExtension(filePath).ToLowerInvariant();
+                string extension = Path.GetExtension(filePath).ToUpperInvariant();
                 string mimeType = extension switch
                 {
-                    ".jpg" or ".jpeg" => "image/jpeg",
-                    ".png" => "image/png",
-                    ".gif" => "image/gif",
-                    ".bmp" => "image/bmp",
-                    ".webp" => "image/webp",
+                    ".JPG" or ".JPEG" => "image/jpeg",
+                    ".PNG" => "image/png",
+                    ".GIF" => "image/gif",
+                    ".BMP" => "image/bmp",
+                    ".WEBP" => "image/webp",
                     _ => "image/jpeg",
                 };
 
